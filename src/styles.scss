@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+
+  --h2-spartan-lg: 64px;
+  --h2-spartan-sm: 48px;
+  --h3-spartan-lg: 32px;
+  --h3-spartan-sm: 24px;
+  --p-spartan-lg: 24px;
+  --p-spartan-lg: 20px;
+
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  scroll-snap-type: y mandatory;
+}
+body{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1{
+  font-size: 96px;
+  font-family: "League Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h2,h3,h4{
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+h2{
+  font-size: 48px;
+}
+@media (max-width: 768px) {
+  h2{
+    font-size: 64px;
+  }
+}
+h3{
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  h3{
+    font-size: 32px;
+  }
+}
+p{
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+}
+li{
+  list-style: none;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  scroll-snap-align: start;
+}
