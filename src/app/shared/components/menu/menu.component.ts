@@ -1,17 +1,23 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
+export class MenuComponent implements OnChanges{
 
   @Input() active: boolean = false;
-  @Output() activeStateChange = new EventEmitter<Boolean>()
+  @Output() activeStateChange = new EventEmitter<boolean>()
 
-  changeHidden(){
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("Changes: ", changes)
+  }
+
+
+  changeHiddenMenu(){
     this.active = !this.active;
-    this.activeStateChange.emit(this.active)
+    console.log("Emitir")
+    this.activeStateChange.emit(this.active);
   }
 
 }

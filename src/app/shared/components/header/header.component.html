@@ -5,9 +5,9 @@
     </div>
 
     <div>
-      <img [src]="menu" alt="menu">
+      <img [src]="menu" alt="menu" (click)="activeMenu()">
     </div>
   </nav>
 </header>
 
-<app-menu></app-menu>
+<app-menu [active]="active" (activeStateChange)="changeHiddenMenu($event)"></app-menu>

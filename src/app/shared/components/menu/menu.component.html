@@ -1,5 +1,5 @@
-<menu class="menu">
-  <div class="close" [class.active]="active"><p>X</p></div>
+<menu class="menu" [class.active]="active">
+  <div class="close" (click)="changeHiddenMenu()"><p>X</p></div>
   <div class="menu-container col-8 offset-2 d-flex justify-content-between align-items-center">
     <div class="menu-text d-flex align-items-start justify-content-center w-50">
       <div class="text-vertical"><h2>{{"menu" | uppercase}}</h2></div>
