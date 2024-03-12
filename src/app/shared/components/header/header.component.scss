@@ -1,0 +1,18 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 0px 37px;
+  @media (min-width: 768px) {
+    padding: 0px 120px;
+    padding-top: 60px;
+  }
+  nav{
+    height: 80px;
+  }
+
+
+}
