@@ -1,0 +1,60 @@
+.aboutme{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .section-container{
+    max-width: 1100px;
+    width: 60%;
+    margin: 0 auto;
+
+    .soft-skills{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .skill{
+        width: 150px;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        i{
+          font-size: 2rem;
+          img{
+            width: 2rem;
+          }
+        }
+
+      }
+    }
+  }
+
+  .skills-container{
+    .skills-list{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      .skill{
+        width: 150px;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        i{
+          font-size: 2rem;
+          img{
+            width: 2rem;
+          }
+        }
+
+      }
+    }
+  }
+}
