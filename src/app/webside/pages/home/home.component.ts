@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  x: number = 0;
+
+  onMouseMove(event: MouseEvent) {
+    console.log(`Posición del mouse: X = ${event.clientX}, Y = ${event.clientY}`);
+    this.x = event.clientX;
+  }
+
 }
