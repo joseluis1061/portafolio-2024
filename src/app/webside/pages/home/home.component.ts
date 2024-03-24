@@ -32,9 +32,14 @@ export class HomeComponent implements AfterViewInit{
     this.x = e.clientX;
     this.y = e.clientY;
 
+    const containerRect = container.getBoundingClientRect();
+    console.log("containerRect: ", containerRect);
+    const offsetX = this.x - containerRect.left;
+    const offsetY = this.y - containerRect.top;
+
     gsap.set(particle, {
-      x: 0,
-      y: 0,
+      top: offsetY,
+      left: offsetX,
       width: size,
       height: size,
       position: 'absolute',
@@ -51,8 +56,6 @@ export class HomeComponent implements AfterViewInit{
       duration: 'random(4, 7)',
       ease: 'power2.out',
       onComplete: () => {
-        // this.renderer.removeChild(this.el.nativeElement, particle);
-        // const container = this.el.nativeElement.querySelector('#home');
         this.renderer.removeChild(container, particle);
       }
     });
