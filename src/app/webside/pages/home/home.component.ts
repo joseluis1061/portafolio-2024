@@ -1,4 +1,4 @@
-import { Component, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, Renderer2, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import gsap from 'gsap';
 @Component({
   selector: 'app-home',
@@ -18,6 +18,53 @@ export class HomeComponent implements AfterViewInit{
   ngAfterViewInit(): void {
     //this.createParticle();
   }
+
+  @HostListener('window:mousemove', ['$event'])
+  onMouseMove(e: MouseEvent) {
+    const particle = this.renderer.createElement('span');
+    this.renderer.appendChild(this.el.nativeElement, particle);
+
+    const container = this.el.nativeElement.querySelector('#home-container');
+    this.renderer.appendChild(container, particle);
+
+    const size = Math.random() * 120 + 30;
+    this.rainbow += 2;
+    this.x = e.clientX;
+    this.y = e.clientY;
+
+    gsap.set(particle, {
+      x: 0,
+      y: 0,
+      width: size,
+      height: size,
+      position: 'absolute',
+      borderRadius: '50%',
+      zIndex: -2,
+      filter: `blur(${(1 - ((size - 30) / 120)) * 10}px)`,
+      backgroundColor: `hsl(${this.rainbow}, 70%, 50%)`
+    });
+
+    gsap.to(particle, {
+      x: '+=random(-200, 200)',
+      y: '+=random(-200, 200)',
+      opacity: 0,
+      duration: 'random(4, 7)',
+      ease: 'power2.out',
+      onComplete: () => {
+        // this.renderer.removeChild(this.el.nativeElement, particle);
+        // const container = this.el.nativeElement.querySelector('#home');
+        this.renderer.removeChild(container, particle);
+      }
+    });
+  }
+}
+/*
+
+
+
+
+
+
 
   onMouseMove(event: MouseEvent) {
     this.rainbow += 2;
@@ -55,10 +102,9 @@ export class HomeComponent implements AfterViewInit{
       duration: 'random(4, 7)',
       ease: 'power2.out',
       onComplete: () => {
-        console.log('Particula')
+        console.log('Parti')
         return particle.remove();
       }
     });
   }
-
-}
+*/

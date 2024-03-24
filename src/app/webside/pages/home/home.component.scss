@@ -1,36 +1,48 @@
 .home{
   background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  h1, h2{
-    text-align: center;
-  }
-  .sociales{
-    margin-top: 1.5rem;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  &-container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    .social{
+    z-index: 2;
+    color: white;
+    background-color: transparent;
+    h1, h2{
+      text-align: center;
+    }
+    .sociales{
+      margin-top: 1.5rem;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      cursor: pointer;
-      i{
-        color: white;
-        font-size: 2.5rem;
+      gap: 25px;
+      .social{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        i{
+          color: white;
+          font-size: 2.5rem;
+        }
       }
     }
-  }
 
+  }
   .particle {
     position: absolute;
     width: 20px;
     height: 20px;
+    background: red; /* Cambiar color de las partículas según preferencias */
     border-radius: 50%;
     mix-blend-mode: screen;
   }
