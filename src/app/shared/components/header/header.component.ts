@@ -1,17 +1,30 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { SectionActiveService } from 'src/app/services/section-active.service';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   logo!: string;
   menu!: string;
   active: boolean = false;
+  typeSection: string = 'black';
+
+  constructor(
+    private sectionActiveService: SectionActiveService
+  ){}
+
+  public sectionSuscribe$ !: Subscription;
   ngOnInit() {
     this.setImageBasedOnScreenSize();
+    this.sectionSuscribe$ = this.sectionActiveService.section$
+      .subscribe(arg => {
+        this.typeSection = arg;
+      });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -37,5 +50,9 @@ export class HeaderComponent {
 
   changeHiddenMenu(event:boolean){
     this.active = event;
+  }
+
+  ngOnDestroy(): void {
+    this.sectionSuscribe$.unsubscribe();
   }
 }
