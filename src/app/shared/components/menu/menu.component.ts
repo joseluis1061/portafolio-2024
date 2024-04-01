@@ -1,10 +1,10 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter,  } from '@angular/core';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent{
+export class MenuComponent {
 
   @Input() active: boolean = false;
   @Output() activeStateChange = new EventEmitter<boolean>()
@@ -13,5 +13,4 @@ export class MenuComponent{
     this.active = !this.active;
     this.activeStateChange.emit(this.active);
   }
-
 }

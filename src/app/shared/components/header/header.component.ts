@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { SectionActiveService } from 'src/app/services/section-active.service';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -36,11 +36,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     const screenWidth = window.innerWidth;
     // Lógica para determinar la ruta de la imagen según el tamaño de la pantalla
     if (screenWidth < 768) {
-      this.logo = '../../../../assets/global/Logo-sm.svg';
-      this.menu = '../../../../assets/global/menu-sm.png';
+      this.logo = '../../../../assets/svg/global/Logo-sm.svg';
+      this.menu = '../../../../assets/svg/global/menu-sm.png';
     } else {
-      this.logo = '../../../../assets/global/Logo-lg.svg';
-      this.menu = '../../../../assets/global/menu-lg.svg';
+      this.logo = '../../../../assets/svg/global/Logo-lg.svg';
+      this.menu = '../../../../assets/svg/global/menu-lg.svg';
     }
   }
 

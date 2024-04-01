@@ -9,7 +9,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,

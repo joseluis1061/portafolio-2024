@@ -19,10 +19,6 @@ export class HomeComponent implements AfterViewInit{
     private sectionActiveService: SectionActiveService
   ){}
 
-
-
-
-
   ngAfterViewInit(): void {
     window.addEventListener('scroll', () => {
       const rect = this.home.nativeElement.getBoundingClientRect();

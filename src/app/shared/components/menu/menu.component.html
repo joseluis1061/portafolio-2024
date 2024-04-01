@@ -1,5 +1,5 @@
 <menu class="menu" [class.active]="active">
-  <div class="close" (click)="changeHiddenMenu()"><p>X</p></div>
+  <div #close class="close" (click)="changeHiddenMenu()"><p>X</p></div>
   <div class="menu-container col-8 offset-2 d-flex justify-content-between align-items-center">
     <div class="menu-text d-flex align-items-start justify-content-center w-50">
       <div class="text-vertical"><h2>{{"menu" | uppercase}}</h2></div>
@@ -21,13 +21,12 @@
     <div class="information d-flex flex-column align-items-center justify-content-center w-50">
       <div class="info w-50 m-auto">
         <p class="email text-start">joseluis836ps@gmail.com</p>
-        <p class="phone text-start">+57 3195675062</p>
         <div class="social d-flex align-items-center justify-content-start gap-3">
-          <i class="fa-brands fa-square-github"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-codepen"></i>
-          <i class="fa-brands fa-square-facebook"></i>
-          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-square-github" type="button"></i>
+          <i class="fa-brands fa-linkedin" type="button"></i>
+          <i class="fa-brands fa-codepen" type="button"></i>
+          <i class="fa-brands fa-square-facebook" type="button"></i>
+          <i class="fa-brands fa-square-instagram" type="button"></i>
         </div>
       </div>
     </div>
