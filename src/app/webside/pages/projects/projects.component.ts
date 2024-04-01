@@ -19,6 +19,7 @@ export class ProjectsComponent {
     private el: ElementRef
   ) { }
 
+  /*
   ngOnInit(): void {
     // Obtener elementos del DOM
     this.gallery = this.el.nativeElement.querySelector('.gallery');
@@ -34,7 +35,7 @@ export class ProjectsComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
-    // Iniciar la inicialización del efecto de paralaje cuando se desplaza la página
+    // Inicialización del efecto de paralaje cuando se desplaza la página
     this.init();
   }
 
@@ -83,5 +84,5 @@ export class ProjectsComponent {
     return start * (1 - t) + end * t;
   }
 
-
+  */
 }
