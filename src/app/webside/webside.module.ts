@@ -8,13 +8,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     LayoutComponent,
     AboutmeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
