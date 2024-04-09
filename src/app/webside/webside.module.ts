@@ -11,6 +11,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { CardComponent } from './components/card/card.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -23,7 +25,8 @@ import { ContactComponent } from './pages/contact/contact.component';
   imports: [
     CommonModule,
     WebsideRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class WebsideModule { }
