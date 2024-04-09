@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   padding-top: 150px;
+  padding-bottom: 1rem;
   background-color: black;
   color: white;
   display: flex;
@@ -38,7 +39,7 @@
   .gallery-track {
     // position: fixed;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.25rem;
     padding: 0.25rem;
     will-change: transform;

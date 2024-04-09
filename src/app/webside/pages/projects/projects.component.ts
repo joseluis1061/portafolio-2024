@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
-
+import { PROJECTS_DATA } from 'src/app/shared/constants/data/projects/projects.data';
+import { Projects } from 'src/app/models/project.model';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -13,6 +14,8 @@ export class ProjectsComponent {
   startY: number = 0;
   endY: number = 0;
   raf!: number;
+
+  projects: Projects[] = PROJECTS_DATA;
 
   constructor(
     private renderer: Renderer2,

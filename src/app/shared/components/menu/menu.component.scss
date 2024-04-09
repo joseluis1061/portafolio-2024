@@ -1,16 +1,13 @@
 .menu{
-  position: absolute;
+  position: fixed;
   top: 0;
-  opacity: 0;
-  left: -100vw;
   height: 100vh;
+  left: -100vw;
   width: 100%;
+  opacity: 0;
   z-index: 100;
   background-color: white;
   transition: all ease 0.4s;
-
-
-
   .menu-container{
     height: 100%;
   }

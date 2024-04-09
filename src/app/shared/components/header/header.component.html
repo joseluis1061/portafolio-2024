@@ -1,12 +1,12 @@
 <header class="header">
   <nav class="d-flex align-items-center justify-content-around w-100">
-    <div class="w-100">
+    <a class="w-100">
       <img [src]="logo" alt="Logo">
-    </div>
+    </a>
 
-    <div>
-      <img [src]="menu" alt="menu" (click)="activeMenu()">
-    </div>
+    <a (click)="activeMenu()">
+      <img [src]="menu" alt="menu">
+    </a>
   </nav>
 </header>
 

@@ -1,15 +1,17 @@
 <div class='card'>
   <div class='card-image-wrapper'>
-    <img [src]="projects[0].cover">
+    <img [src]="project.cover">
   </div>
+
+
   <div class="card__overlay">
-    <p>{{projects[0].name}}</p>
-    <p>{{projects[0].resume}}</p>
+    <p>{{project.name}}</p>
+    <p>{{project.resume}}</p>
 
     <div class="card__icons">
       <div class="card__review">
-        <a [href]="projects[0].github" class="review__a" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a [href]="projects[0].web"  class="review__a" target="_blank"><i class="fa-solid fa-globe"></i></a>
+        <a [href]="project.github" class="review__a" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a [href]="project.web"  class="review__a" target="_blank"><i class="fa-solid fa-globe"></i></a>
       </div>
 
       <div class="card__technologies">
