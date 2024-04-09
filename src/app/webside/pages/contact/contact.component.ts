@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -10,9 +10,9 @@ export class ContactComponent implements OnInit{
 
   initFormParent(): void {
     this.formContactMe = new FormGroup({
-      name: new FormControl(''),
-      email: new FormControl(''),
-      message: new FormControl('')
+      name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      message: new FormControl('', [Validators.required])
     });
   }
 
@@ -24,9 +24,5 @@ export class ContactComponent implements OnInit{
     const name = this.formContactMe.get('name')?.value;
     const email = this.formContactMe.get('email')?.value;
     const message = this.formContactMe.get('message')?.value;
-
-    console.log('name: ', name);
-    console.log('email: ', email);
-    console.log('message: ', message);
   }
 }

@@ -37,24 +37,37 @@
     }
     &__input,
     &__textarea{
-      width: calc(100% - 80px);
+      min-width: calc(100% - 80px);
       border-radius: 15px 15px;
       border: 1px solid transparent;
       padding: 0.5em 1em;
     }
-    &__item--area {
+    &__item--area{
       display: flex;
+      flex-wrap: wrap;
     }
 
     &__label {
       align-self: flex-start;
     }
     &__btn{
-      border: 1px solid transparent;
-      width: 100%;
+      border: 2px solid transparent;
+      width: calc(100% - 80px);
       border-radius: 15px 15px;
       padding: 0.5rem 1rem;
       font-weight: 700;
+      align-self: flex-end;
+      color: white;
+      background-color: var(--blue-light);
+    }
+    &__btn:hover{
+      border: 2px solid white;
+    }
+    &__error{
+      display: block;
+      width: 100%;
+      color: var(--red-danger);
+      margin: 0;
     }
   }
 

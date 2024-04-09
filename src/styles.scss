@@ -11,6 +11,10 @@
   --p-spartan-lg: 24px;
   --p-spartan-lg: 20px;
 
+  // --blue-light: #009dff;
+  --blue-light: #5100ff;
+  --red-danger: rgb(225, 16, 16);
+
 }
 
 *,
@@ -45,6 +49,7 @@ h2,h3,h4{
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: var(--blue-light)!important;
 }
 h2{
   font-size: 48px!important;
