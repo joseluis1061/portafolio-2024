@@ -1,8 +1,9 @@
 
 .card {
-  height: 400px;
+  //height: 280px; //170
+  max-width: 500px; //300
   overflow: hidden;
-
+  position: relative;
   & .card-image-wrapper {
     height: 135%;
     will-change: transform;
@@ -11,6 +12,37 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  &__overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba($color: #000000, $alpha: 0.95);
+    color: white;
+    padding: 20px 20px;
+
+    .card__icons{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .card__review,
+    .card__technologies{
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1em;
+      i{
+        font-size: 2em;
+        color: white;
+      }
     }
   }
 }

@@ -1,10 +1,10 @@
 import { Projects } from "src/app/models/project.model"
-export const projects: Projects[] = [
+export const PROJECTS_DATA: Projects[] = [
   {
     id: 0,
     name: 'Fanta',
     github: 'https://github.com/joseluis1061/FantaAngular',
-    web: 'https://fantascroll.netlify.app/webside',
+    web: 'https://fantascroll.netlify.app',
     resume: 'Landing page con animaciones en GSAP. Diseño centrado en Desktop con movimiento de elementos para una pagina promocional. Combina la manipulación de elementos y la reactividad',
     type: 'landing',
     cover: '../../../../../assets/svg/projects/project-fanta.svg',
