@@ -3,24 +3,24 @@
     <h2>Contact me</h2>
     <p>Contactame y hablemos de nuestro proximo trabajo. Mandame un correo o contactame por Linkendin</p>
     <form [formGroup]="formContactMe" class="form"  (ngSubmit)="onSubmit()">
-      <div class="item__form">
-        <label for="name">Name</label>
-        <input type="text" formControlName="name">
+      <div class="form__item">
+        <label class="form__label" for="name">Name</label>
+        <input class="form__input" type="text" formControlName="name">
       </div>
 
-      <div class="item__form">
-        <label for="email">Correo</label>
-        <input type="text" formControlName="email">
+      <div class="form__item">
+        <label class="form__label" for="email">Correo</label>
+        <input class="form__input" type="text" formControlName="email">
       </div>
 
 
-      <div class="item__form item__form--area">
-        <label for="message">Mensaje</label>
-        <textarea name="Message" id="message" cols="30" rows="10" formControlName="message" type="textarea"></textarea>
+      <div class="form__item form__item--area">
+        <label class="form__label" for="message">Mensaje</label>
+        <textarea class="form__textarea" name="Message" id="message" cols="30" rows="10" formControlName="message" type="textarea"></textarea>
       </div>
 
-      <button type="submit" class="contact__btn">
-        <p>Send</p>
+      <button type="submit" class="form__btn">
+        Enviar
       </button>
     </form>
 
