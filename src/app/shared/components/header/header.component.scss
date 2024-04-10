@@ -4,11 +4,15 @@ header{
   left: 0;
   z-index: 100;
   width: 100%;
-  // background-color: rgba(0,0,0,0.7);
-  padding: 0px 37px;
+  background-color: rgba(0,0,0,1);
+  padding: 0px 1.2em;
+  .logo{
+    color: var(--blue-light);
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
   @media (min-width: 768px) {
-    padding: 0px 120px;
-    padding-top: 60px;
+    padding: 10px 120px;
   }
   nav{
     height: 80px;

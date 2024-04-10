@@ -36,11 +36,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     const screenWidth = window.innerWidth;
     // Lógica para determinar la ruta de la imagen según el tamaño de la pantalla
     if (screenWidth < 768) {
-      this.logo = '../../../../assets/svg/global/Logo-sm.svg';
-      this.menu = '../../../../assets/svg/global/menu-sm.png';
+      this.logo = '../../../../assets/svg/global/LogoB-sm.svg';
+      this.menu = '../../../../assets/svg/global/menuB-sm.svg';
     } else {
-      this.logo = '../../../../assets/svg/global/Logo-lg.svg';
-      this.menu = '../../../../assets/svg/global/menu-lg.svg';
+      this.logo = '../../../../assets/svg/global/LogoB-lg.svg';
+      this.menu = '../../../../assets/svg/global/menuB-lg.svg';
     }
   }
 

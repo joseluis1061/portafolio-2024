@@ -1,8 +1,8 @@
 .projects{
   width: 100%;
   height: 100vh;
-  padding-top: 150px;
-  padding-bottom: 1rem;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: black;
   color: white;
   display: flex;
@@ -11,13 +11,15 @@
   align-items: center;
   .section-container{
     max-width: 1100px;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1.2em;
   }
 
   .gallery{
+    padding: 0 1.2em;
     max-width: 1100px;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -40,7 +42,7 @@
     // position: fixed;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.25rem;
+    gap: 1rem;
     padding: 0.25rem;
     will-change: transform;
   }
@@ -70,6 +72,70 @@
   @media (width < 550px) {
     .gallery-track {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 1rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .section-container{
+      max-width: 1100px;
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .gallery{
+      max-width: 1100px;
+      width: 60%;
+      margin: 0 auto;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+    }
+
+    .gallery-track {
+      // position: fixed;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.25rem;
+      padding: 0.25rem;
+      will-change: transform;
+    }
+
+    .card {
+      height: 400px;
+      overflow: hidden;
+
+      & .card-image-wrapper {
+        height: 135%;
+        will-change: transform;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 
