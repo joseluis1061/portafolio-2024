@@ -33,8 +33,19 @@ export const PROJECTS_DATA: Projects[] = [
   {
     id: 3,
     name: 'Wordle',
-    github: 'https://visionary-blancmange-e764a6.netlify.app/',
+    github: 'https://github.com/joseluis1061/wordle',
     web: 'https://visionary-blancmange-e764a6.netlify.app/',
+    resume: 'Pon tu mente a prueba adivina la palabra oculta en 6 intentos. Juego desarrollado con las tecnologias base de la web Html, Css y Java Script',
+    type: 'game',
+    cover: '../../../../../assets/svg/projects/project-fanta.svg',
+    technologies: ['Html', 'CSS', 'Java Scrip']
+  }
+  ,
+  {
+    id: 4,
+    name: 'Trello Clone',
+    github: 'https://github.com/joseluis1061/trello-clone',
+    web: 'https://trellopair.netlify.app/',
     resume: 'Pon tu mente a prueba adivina la palabra oculta en 6 intentos. Juego desarrollado con las tecnologias base de la web Html, Css y Java Script',
     type: 'game',
     cover: '../../../../../assets/svg/projects/project-fanta.svg',
