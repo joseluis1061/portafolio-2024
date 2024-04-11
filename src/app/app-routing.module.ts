@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './webside/pages/contact/contact.component';
+import { ExpirienceComponent } from './webside/pages/expirience/expirience.component';
 const routes: Routes = [
   {
     path: '',
     loadChildren: ()=> import('./webside/webside.module').then(m => m.WebsideModule)
   },
   {
-    path: 'contact',
-    component: ContactComponent
+    path: 'experience',
+    component: ExpirienceComponent
   }
 ];
 

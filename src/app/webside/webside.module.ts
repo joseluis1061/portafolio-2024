@@ -12,6 +12,7 @@ import { CardComponent } from './components/card/card.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ExpirienceComponent } from './pages/expirience/expirience.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutmeComponent,
     ProjectsComponent,
     CardComponent,
-    ContactComponent
+    ContactComponent,
+    ExpirienceComponent
   ],
   imports: [
     CommonModule,
