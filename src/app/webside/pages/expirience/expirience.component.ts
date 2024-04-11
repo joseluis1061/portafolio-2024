@@ -1,16 +1,14 @@
-import { Component } from '@angular/core';
-
-interface Step {
-  label: string;
-}
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-expirience',
   templateUrl: './expirience.component.html',
   styleUrls: ['./expirience.component.scss']
 })
-export class ExpirienceComponent {
+export class ExpirienceComponent implements OnInit{
+
+  idCurrentItem: number = 0;
+
 
   itemNavigate = [
     {
@@ -34,5 +32,18 @@ export class ExpirienceComponent {
       title: "Billing 5"
     },
   ]
+
+  ngOnInit(): void {
+    if(this.itemNavigate.length > 0 && this.idCurrentItem === 0){
+      this.selectItem(this.itemNavigate[0].id)
+    }
+  }
+
+  //Función para activar un paso
+  selectItem(id: number){
+    if(id !== this.idCurrentItem){
+      this.idCurrentItem = id;
+    }
+  }
 
 }
