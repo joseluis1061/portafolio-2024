@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "images": "npm images:resize && npm run images:compress",
+    "images:resize": "node scripts/resize.mjs",
+    "images:compress": "node scripts/compress.mjs"
   },
   "private": true,
   "dependencies": {
@@ -24,9 +27,13 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "gsap": "^3.12.5",
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^8.0.0",
     "material": "^0.9.8",
     "material-icons": "^1.13.12",
     "rxjs": "~7.8.0",
+    "sharp": "^0.33.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
