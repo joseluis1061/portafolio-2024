@@ -1,7 +1,10 @@
 <section class="contact" id="contact" #contact>
   <div class="contact-container section-container" id="contact-container">
     <h2>Contact me</h2>
-    <p>Contactame y hablemos de nuestro proximo trabajo. Mandame un correo o contactame por Linkendin</p>
+    <p>Contactame y hablemos de nuestro proximo trabajo.
+      Mandame un correo o contactame por
+      <a class="contact__a" href="https://www.linkedin.com/in/joseluis-zuniga" target="_blank">Linkendin</a>
+    </p>
     <form [formGroup]="formContactMe" class="form"  (ngSubmit)="onSubmit()">
       <div class="form__item">
         <label class="form__label" for="name">Name</label>
@@ -13,7 +16,7 @@
 
       <div class="form__item">
         <label class="form__label" for="email">Correo</label>
-        <input id="email" class="form__input" type="email" formControlName="email">
+        <input required id="email" class="form__input" type="email" formControlName="email">
         <p class="form__error" *ngIf="formContactMe.get('email')?.errors?.['required'] && formContactMe.get('email')?.touched">
           Email is required.
         </p>
