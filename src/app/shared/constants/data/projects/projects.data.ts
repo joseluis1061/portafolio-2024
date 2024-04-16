@@ -12,13 +12,13 @@ export const PROJECTS_DATA: Projects[] = [
   },
   {
     id: 1,
-    name: 'Lamborgini',
-    github: 'https://github.com/joseluis1061/lamborgini_three_js',
-    web: 'https://lamborgini-threejs.netlify.app/',
-    resume: 'Landing page con carga de modelos 3D usando GSAP, control de movimiento mediante GSAP y Angular como framework frontend',
-    type: 'landing',
-    cover: '../../../../../assets/svg/projects/project-fanta.svg',
-    technologies: ['Angular', 'GSAP', 'Three JS']
+    name: 'Trello Clone',
+    github: 'https://github.com/joseluis1061/trello-clone',
+    web: 'https://trellopair.netlify.app/',
+    resume: 'Clone de trello, cuenta con autenticación de usuarios, registro, rutas protegidas, crear boards y drag and drop de lista de tareas',
+    type: 'aplication',
+    cover: '../../../../../assets/svg/projects/trelloApp.svg',
+    technologies: ['Html', 'CSS', 'Java Scrip']
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const PROJECTS_DATA: Projects[] = [
     web: 'https://bestguitar.netlify.app/',
     resume: 'E comerce para compra de guitarras. Desarrollado con React',
     type: 'landing',
-    cover: '../../../../../assets/svg/projects/project-fanta.svg',
+    cover: '../../../../../assets/svg/projects/guitarLa.svg',
     technologies: ['React']
   },
   {
@@ -37,23 +37,18 @@ export const PROJECTS_DATA: Projects[] = [
     web: 'https://visionary-blancmange-e764a6.netlify.app/',
     resume: 'Pon tu mente a prueba adivina la palabra oculta en 6 intentos. Juego desarrollado con las tecnologias base de la web Html, Css y Java Script',
     type: 'game',
-    cover: '../../../../../assets/svg/projects/project-fanta.svg',
+    cover: '../../../../../assets/svg/projects/wordle.svg',
     technologies: ['Html', 'CSS', 'Java Scrip']
-  }
-  ,
+  },
   {
     id: 4,
-    name: 'Trello Clone',
-    github: 'https://github.com/joseluis1061/trello-clone',
-    web: 'https://trellopair.netlify.app/',
-    resume: 'Pon tu mente a prueba adivina la palabra oculta en 6 intentos. Juego desarrollado con las tecnologias base de la web Html, Css y Java Script',
-    type: 'game',
+    name: 'Lamborgini',
+    github: 'https://github.com/joseluis1061/lamborgini_three_js',
+    web: 'https://lamborgini-threejs.netlify.app/',
+    resume: 'Landing page con carga de modelos 3D usando GSAP, control de movimiento mediante GSAP y Angular como framework frontend',
+    type: 'landing',
     cover: '../../../../../assets/svg/projects/project-fanta.svg',
-    technologies: ['Html', 'CSS', 'Java Scrip']
-  }
-
-
-
-
+    technologies: ['Angular', 'GSAP', 'Three JS']
+  },
 
 ]
