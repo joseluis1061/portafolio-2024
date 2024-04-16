@@ -4,14 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:prod": "http-server ./dist/portafolio2024 -p 8080",
     "build": "ng build",
     "build:stats": "ng build --stats-json",
     "analyze": "npm run build:stats && webpack-bundle-analyzer dist/landing-perf-angular/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "images": "npm images:resize && npm run images:compress",
     "images:resize": "node scripts/resize.mjs",
-    "images:compress": "node scripts/compress.mjs"
+    "images:compress": "node scripts/compress.mjs",
+    "images": "npm images:resize && npm run images:compress"
   },
   "private": true,
   "dependencies": {

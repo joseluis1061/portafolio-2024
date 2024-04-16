@@ -1,9 +1,9 @@
 import sharp from "sharp";
 import * as fs from "fs";
-const directory = "./src/assets/images";
+const directory = "./src/assets/image";
 fs.readdirSync(directory).forEach(async (file) => {
 	try {
-		const image = sharp(`$(directory}/${file}`);
+		const image = sharp(`${directory}/${file}`);
 		const name = file.split(".")[0];
 		const { format } = await image.metadata();
 		if (
@@ -14,15 +14,16 @@ fs.readdirSync(directory).forEach(async (file) => {
 		) {
 		image
       .resize(450) // width
-      .toFile(`${directory}/${name}-small. ${format}`);
+      .toFile(`${directory}/${name}-small.${format}`);
 		image
       .resize(750) // width
       .toFile(`${directory}/${name}-medium.${format}`);
-      image
-      .resize(1800) // width
-      .toFile(`${directory}/${name}-large.${format}`);
+    image
+    .resize(1800) // width
+    .toFile(`${directory}/${name}-large.${format}`);
   }
   }catch(error){
-    console.log(file)
+    console.log("Error: ", error);
+    console.log(file);
   }
 })
