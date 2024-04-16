@@ -1,19 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ExpirienceComponent } from './webside/pages/expirience/expirience.component';
+import { RouterModule, Routes, PreloadAllModules  } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
     loadChildren: ()=> import('./webside/webside.module').then(m => m.WebsideModule)
-  },
-  {
-    path: 'experience',
-    component: ExpirienceComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

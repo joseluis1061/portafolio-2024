@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:stats": "ng build --stats-json",
+    "analyze": "npm run build:stats && webpack-bundle-analyzer dist/landing-perf-angular/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "images": "npm images:resize && npm run images:compress",
@@ -49,6 +51,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.1.3"
+    "typescript": "~5.1.3",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
