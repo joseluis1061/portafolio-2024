@@ -1,6 +1,6 @@
 <menu class="menu" [class.menu__active]="active">
   <div class="menu__container">
-    <div #close class="menu__close" (click)="changeHiddenMenu()"><p>X</p></div>
+    <div #close class="menu__close" (click)="toogleMenu()"><p>X</p></div>
 
     <div class="menu__area">
       <div class="menu__selection">
@@ -9,31 +9,33 @@
         </div>
 
         <nav class="menu__nav">
-          <a href="">
+          <a (click)="goto('home')">
             <p class="menu__p menu__p--btn">{{"home" | uppercase}}</p>
           </a>
-          <a href="">
-            <p class="menu__p menu__p--btn">{{"projects" | uppercase}}</p>
-          </a>
-          <a href="">
+          <a (click)="goto('aboutme')">
             <p class="menu__p menu__p--btn">{{"about" | uppercase}}</p>
           </a>
-          <a href="">
+          <a (click)="goto('projects')" >
+            <p class="menu__p menu__p--btn">{{"projects" | uppercase}}</p>
+          </a>
+          <a  (click)="goto('experience')" >
+            <p class="menu__p menu__p--btn">{{"experience" | uppercase}}</p>
+          </a>
+          <a (click)="goto('contact')">
             <p class="menu__p menu__p--btn">{{"contact" | uppercase}}</p>
           </a>
         </nav>
       </div>
 
       <div class="menu__information">
-        <p class="menu__p menu__p--email">joseluis836ps@gmail.com</p>
+        <p (click)="copyToClipboard('joseluis836ps@gmail.com')">Click para copiar el correo</p>
+        <p class="menu__p menu__p--email" (click)="copyToClipboard('joseluis836ps@gmail.com')">joseluis836ps</p>
         <div class="menu__social">
           <a href="https://github.com/joseluis1061" target="_blank"><i class="fa-brands fa-square-github" type="button"></i></a>
-          <a href=""><i class="fa-brands fa-linkedin" type="button"></i></a>
-          <a href=""><i class="fa-brands fa-codepen" type="button"></i></a>
+          <a href="https://www.linkedin.com/in/joseluis-zuniga" target="_blank"><i class="fa-brands fa-linkedin" type="button"></i></a>
+          <a href="https://codepen.io/joseluis1061" target="_blank"><i class="fa-brands fa-codepen" type="button"></i></a>
         </div>
       </div>
     </div>
   </div>
 </menu>
-
-<!-- npm uninstall bootstrap @ng-bootstrap @ng-bootstrap/ng-bootstrap-->
