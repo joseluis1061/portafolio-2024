@@ -1,27 +1,32 @@
-<menu class="menu" [class.active]="active">
-  <div #close class="close" (click)="changeHiddenMenu()"><p>X</p></div>
-  <div class="menu-container col-8 offset-2 d-flex justify-content-between align-items-center">
-    <div class="menu-text d-flex align-items-start justify-content-center w-50">
-      <div class="text-vertical"><h2>{{"menu" | uppercase}}</h2></div>
-      <nav class="navigate">
+<menu class="menu" [class.menu__active]="active">
+  <div #close class="menu__close" (click)="changeHiddenMenu()"><p>X</p></div>
+
+  <div class="menu__container">
+    <div class="menu__selection">
+      <div class="menu__vertical">
+        <p class="menu__p">{{"menu" | uppercase}}</p>
+      </div>
+
+      <nav class="menu__nav">
         <a href="">
-          <h2>{{"home" | uppercase}}</h2>
+          <p class="menu__p menu__p--btn">{{"home" | uppercase}}</p>
         </a>
         <a href="">
-          <h2>{{"projects" | uppercase}}</h2>
+          <p class="menu__p menu__p--btn">{{"projects" | uppercase}}</p>
         </a>
         <a href="">
-          <h2>{{"about" | uppercase}}</h2>
+          <p class="menu__p menu__p--btn">{{"about" | uppercase}}</p>
         </a>
         <a href="">
-          <h2>{{"contact" | uppercase}}</h2>
+          <p class="menu__p menu__p--btn">{{"contact" | uppercase}}</p>
         </a>
       </nav>
     </div>
-    <div class="information d-flex flex-column align-items-center justify-content-center w-50">
-      <div class="info w-50 m-auto">
-        <p class="email text-start">joseluis836ps@gmail.com</p>
-        <div class="social d-flex align-items-center justify-content-start gap-3">
+
+    <div class="menu__information">
+      <div class="menu__information--container">
+        <p class="menu__p menu__p--email">joseluis836ps@gmail.com</p>
+        <div class="menu__social">
           <i class="fa-brands fa-square-github" type="button"></i>
           <i class="fa-brands fa-linkedin" type="button"></i>
           <i class="fa-brands fa-codepen" type="button"></i>
@@ -31,5 +36,4 @@
       </div>
     </div>
   </div>
-
 </menu>
