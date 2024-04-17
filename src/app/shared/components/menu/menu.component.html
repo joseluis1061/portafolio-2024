@@ -28,8 +28,10 @@
       </div>
 
       <div class="menu__information">
-        <p (click)="copyToClipboard('joseluis836ps@gmail.com')">Click para copiar el correo</p>
+        <p *ngIf="!copyMail" (click)="copyToClipboard('joseluis836ps@gmail.com')">Click para <span class="color__blue">copiar el correo</span></p>
+        <p *ngIf="copyMail" [ngClass]="copyMail? 'color__blue': '' ">Correo copiado</p>
         <p class="menu__p menu__p--email" (click)="copyToClipboard('joseluis836ps@gmail.com')">joseluis836ps</p>
+
         <div class="menu__social">
           <a href="https://github.com/joseluis1061" target="_blank"><i class="fa-brands fa-square-github" type="button"></i></a>
           <a href="https://www.linkedin.com/in/joseluis-zuniga" target="_blank"><i class="fa-brands fa-linkedin" type="button"></i></a>

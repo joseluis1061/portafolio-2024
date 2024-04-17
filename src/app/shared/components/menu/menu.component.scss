@@ -102,6 +102,11 @@
     margin-top: 1em;
     a{
       color: var(--blue-light);
+      transition: all 0.4s ease-in-out;
+    }
+    a:hover{
+      text-decoration: underline;
+      transform: scale(1.2);
     }
   }
 
@@ -112,6 +117,11 @@
       align-items: center;
       justify-content: space-around;
     }
+  }
+  .color__blue{
+    color: var(--blue-light);
+    text-decoration: underline;
+    font-weight: 700;
   }
 }
 

@@ -16,7 +16,13 @@ export class MenuComponent {
     @Inject(DOCUMENT) private document: Document
   ) {}
 
+  toogleCopyMail(){
+    this.copyMail = !this.copyMail;
+    setTimeout(() => {
+      this.copyMail = !this.copyMail;
+    }, 2000);
 
+  }
 
   toogleMenu(){
     this.active = !this.active;
@@ -32,17 +38,13 @@ export class MenuComponent {
     this.toogleMenu();
   }
 
-  copyToClipboard(value: string): void {
-    const selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
-    selBox.value = value;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
+  async copyToClipboard(value: string): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(value);
+      this.toogleCopyMail()
+      console.log('Texto copiado con éxito!');
+    } catch (err) {
+      console.error('Error al copiar el texto: ', err);
+    }
   }
 }
