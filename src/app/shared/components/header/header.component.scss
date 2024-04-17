@@ -1,20 +1,31 @@
-header{
+.header{
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
   background-color: rgba(0,0,0,1);
-  padding: 0px 1.2em;
+  padding: 1em 1em;
+
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+
+  }
+
+
   .logo{
     color: var(--blue-light);
     font-weight: 700;
     font-size: 1.4rem;
   }
   @media (min-width: 768px) {
-    padding: 10px 120px;
+    padding: 1em 0px;
+    &__nav{
+      max-width: 1200px;
+    }
   }
-  nav{
-    height: 80px;
-  }
+
 }
