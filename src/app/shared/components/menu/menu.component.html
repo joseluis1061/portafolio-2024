@@ -1,37 +1,35 @@
 <menu class="menu" [class.menu__active]="active">
-  <div #close class="menu__close" (click)="changeHiddenMenu()"><p>X</p></div>
-
   <div class="menu__container">
-    <div class="menu__selection">
-      <div class="menu__vertical">
-        <p class="menu__p">{{"menu" | uppercase}}</p>
+    <div #close class="menu__close" (click)="changeHiddenMenu()"><p>X</p></div>
+
+    <div class="menu__area">
+      <div class="menu__selection">
+        <div class="menu__vertical">
+          <p class="menu__p">{{"menu" | uppercase}}</p>
+        </div>
+
+        <nav class="menu__nav">
+          <a href="">
+            <p class="menu__p menu__p--btn">{{"home" | uppercase}}</p>
+          </a>
+          <a href="">
+            <p class="menu__p menu__p--btn">{{"projects" | uppercase}}</p>
+          </a>
+          <a href="">
+            <p class="menu__p menu__p--btn">{{"about" | uppercase}}</p>
+          </a>
+          <a href="">
+            <p class="menu__p menu__p--btn">{{"contact" | uppercase}}</p>
+          </a>
+        </nav>
       </div>
 
-      <nav class="menu__nav">
-        <a href="">
-          <p class="menu__p menu__p--btn">{{"home" | uppercase}}</p>
-        </a>
-        <a href="">
-          <p class="menu__p menu__p--btn">{{"projects" | uppercase}}</p>
-        </a>
-        <a href="">
-          <p class="menu__p menu__p--btn">{{"about" | uppercase}}</p>
-        </a>
-        <a href="">
-          <p class="menu__p menu__p--btn">{{"contact" | uppercase}}</p>
-        </a>
-      </nav>
-    </div>
-
-    <div class="menu__information">
-      <div class="menu__information--container">
+      <div class="menu__information">
         <p class="menu__p menu__p--email">joseluis836ps@gmail.com</p>
         <div class="menu__social">
-          <i class="fa-brands fa-square-github" type="button"></i>
-          <i class="fa-brands fa-linkedin" type="button"></i>
-          <i class="fa-brands fa-codepen" type="button"></i>
-          <i class="fa-brands fa-square-facebook" type="button"></i>
-          <i class="fa-brands fa-square-instagram" type="button"></i>
+          <a href="https://github.com/joseluis1061" target="_blank"><i class="fa-brands fa-square-github" type="button"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin" type="button"></i></a>
+          <a href=""><i class="fa-brands fa-codepen" type="button"></i></a>
         </div>
       </div>
     </div>
