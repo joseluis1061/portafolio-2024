@@ -40,15 +40,15 @@ export const PROJECTS_DATA: Projects[] = [
     cover: '../../../../../assets/svg/projects/wordle.svg',
     technologies: ['Html', 'CSS', 'Java Scrip']
   },
-  {
-    id: 4,
-    name: 'Lamborgini',
-    github: 'https://github.com/joseluis1061/lamborgini_three_js',
-    web: 'https://lamborgini-threejs.netlify.app/',
-    resume: 'Landing page con carga de modelos 3D usando GSAP, control de movimiento mediante GSAP y Angular como framework frontend',
-    type: 'landing',
-    cover: '../../../../../assets/svg/projects/project-fanta.svg',
-    technologies: ['Angular', 'GSAP', 'Three JS']
-  },
+  // {
+  //   id: 4,
+  //   name: 'Lamborgini',
+  //   github: 'https://github.com/joseluis1061/lamborgini_three_js',
+  //   web: 'https://lamborgini-threejs.netlify.app/',
+  //   resume: 'Landing page con carga de modelos 3D usando GSAP, control de movimiento mediante GSAP y Angular como framework frontend',
+  //   type: 'landing',
+  //   cover: '../../../../../assets/svg/projects/project-fanta.svg',
+  //   technologies: ['Angular', 'GSAP', 'Three JS']
+  // },
 
 ]

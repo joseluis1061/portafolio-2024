@@ -3,18 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-
   --h2-spartan-lg: 64px;
   --h2-spartan-sm: 48px;
   --h3-spartan-lg: 32px;
   --h3-spartan-sm: 24px;
   --p-spartan-lg: 24px;
   --p-spartan-lg: 20px;
-
   // --blue-light: #009dff;
   --blue-light: #5100ff;
   --red-danger: rgb(225, 16, 16);
-
 }
 
 *,
@@ -26,6 +23,7 @@
 }
 html{
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 body{
   box-sizing: border-box;
@@ -37,7 +35,7 @@ body{
 }
 
 h1{
-  font-size: 96px!important;
+  font-size: 96px;
   font-family: "League Gothic", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -49,10 +47,10 @@ h2,h3{
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: var(--blue-light)!important;
+  color: var(--blue-light);
 }
 h2{
-  font-size: 48px!important;
+  font-size: 48px;
 }
 @media (max-width: 768px) {
   h2{
@@ -69,10 +67,18 @@ h3{
 }
 
 h4{
-  font-size: 16px!important;
+  font-size: 18px;
 }
 @media (max-width: 768px) {
   h4{
+    font-size: 26px!important;
+  }
+}
+h5{
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  h5{
     font-size: 26px!important;
   }
 }
@@ -81,6 +87,7 @@ p{
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 10px;
 }
 a{
   color: black;
@@ -91,15 +98,25 @@ a:visited{
 }
 li{
   list-style: none;
+  font-size: 16px;
 }
 .container{
   padding: 120px 40px;
 }
 section {
-  //height: 100vh;
-  // width: 100%;
   position: relative;
-  // scroll-snap-align: start;
+  scroll-snap-align: start;
+  padding-top: 80px;
+}
+@media (min-width: 768px) {
+  section {
+    padding-top: 100px;
+  }
+}
+@media (min-width: 1280px) {
+  section {
+    padding-top: 120px;
+  }
 }
 
 /* Importing Bootstrap SCSS file.
