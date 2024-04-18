@@ -10,6 +10,8 @@ import { FormService } from 'src/app/services/form.service';
 export class ContactComponent implements OnInit{
   formContactMe: FormGroup = new FormGroup({});
 
+  mailSend: boolean = false;
+
   initFormParent(): void {
     this.formContactMe = new FormGroup({
       name: new FormControl('', [Validators.required]),
@@ -34,9 +36,15 @@ export class ContactComponent implements OnInit{
     this.formServise.submitFeedback(this.formContactMe.value).subscribe({
       next: () => {
         this.formContactMe.reset();
+        console.log("Envio de correo");
+        this.mailSend = true;
+        setTimeout(()=> {
+          this.mailSend = false;
+        }, 1000)
       },
       error: error => {
         console.log(error)
+        this.mailSend = false;
       }
     })
   }

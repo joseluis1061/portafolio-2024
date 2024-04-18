@@ -14,6 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExpirienceComponent } from './pages/expirience/expirience.component';
 
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -28,7 +29,7 @@ import { ExpirienceComponent } from './pages/expirience/expirience.component';
     CommonModule,
     WebsideRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class WebsideModule { }
