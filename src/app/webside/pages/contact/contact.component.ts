@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit{
     const email = this.formContactMe.get('email')?.value;
     const message = this.formContactMe.get('message')?.value;
 
-    this.formServise.submitFeedback(this.formContactMe.value).subscribe({
+    this.formServise.submitForm(this.formContactMe.value).subscribe({
       next: () => {
         this.formContactMe.reset();
         console.log("Envio de correo");
