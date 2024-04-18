@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormService } from 'src/app/services/form.service';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -16,6 +18,10 @@ export class ContactComponent implements OnInit{
     });
   }
 
+  constructor(
+    private formServise: FormService
+  ){}
+
   ngOnInit(): void {
     this.initFormParent();
   }
@@ -24,5 +30,14 @@ export class ContactComponent implements OnInit{
     const name = this.formContactMe.get('name')?.value;
     const email = this.formContactMe.get('email')?.value;
     const message = this.formContactMe.get('message')?.value;
+
+    this.formServise.submitFeedback(this.formContactMe.value).subscribe({
+      next: () => {
+        this.formContactMe.reset();
+      },
+      error: error => {
+        console.log(error)
+      }
+    })
   }
 }

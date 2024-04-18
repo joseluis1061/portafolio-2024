@@ -1,6 +1,8 @@
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { PROJECTS_DATA } from 'src/app/shared/constants/data/projects/projects.data';
 import { Projects } from 'src/app/models/project.model';
+import { FormService } from 'src/app/services/form.service';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -19,7 +21,7 @@ export class ProjectsComponent {
 
   constructor(
     private renderer: Renderer2,
-    private el: ElementRef
+    private el: ElementRef,
   ) { }
 
   /*
