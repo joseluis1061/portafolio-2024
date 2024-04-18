@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit{
   formContactMe: FormGroup = new FormGroup({});
 
   mailSend: boolean = false;
+  failInputs: boolean = false;
 
   initFormParent(): void {
     this.formContactMe = new FormGroup({
@@ -30,11 +31,19 @@ export class ContactComponent implements OnInit{
 
   onSubmit() {
 
-    this.mailSend = true;
-    setTimeout(()=> {
-      this.mailSend = false;
-      this.formContactMe.reset();
-    }, 3000)
+    if(this.formContactMe.valid){
+      this.mailSend = true;
+      setTimeout(()=> {
+        this.mailSend = false;
+        this.formContactMe.reset();
+      }, 3000)
+    }else{
+      this.failInputs = true;
+      setTimeout(()=> {
+        this.failInputs = false;
+      }, 3000)
+    }
+
     /*
     this.formServise.submitForm(this.formContactMe.value).subscribe({
       next: () => {
