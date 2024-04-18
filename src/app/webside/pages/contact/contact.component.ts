@@ -29,10 +29,13 @@ export class ContactComponent implements OnInit{
   }
 
   onSubmit() {
-    const name = this.formContactMe.get('name')?.value;
-    const email = this.formContactMe.get('email')?.value;
-    const message = this.formContactMe.get('message')?.value;
 
+    this.mailSend = true;
+    setTimeout(()=> {
+      this.mailSend = false;
+      this.formContactMe.reset();
+    }, 3000)
+    /*
     this.formServise.submitForm(this.formContactMe.value).subscribe({
       next: () => {
         this.formContactMe.reset();
@@ -46,6 +49,6 @@ export class ContactComponent implements OnInit{
         console.log(error)
         this.mailSend = false;
       }
-    })
+    })*/
   }
 }
