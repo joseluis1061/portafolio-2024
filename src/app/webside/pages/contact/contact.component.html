@@ -9,7 +9,7 @@
       <input type="hidden" name="form-name" value="contact">
       <div class="form__item">
         <label class="form__label" for="name">Name</label>
-        <input id="name" class="form__input" type="text" formControlName="name">
+        <input id="name" class="form__input" type="text" formControlName="name" name="name">
         <p class="form__error" *ngIf="formContactMe.get('name')?.errors?.['required'] && formContactMe.get('name')?.touched">
           Name is required.
         </p>
@@ -17,7 +17,7 @@
 
       <div class="form__item">
         <label class="form__label" for="email">Correo</label>
-        <input required id="email" class="form__input" type="email" formControlName="email">
+        <input required id="email" class="form__input" type="email" formControlName="email" name="email">
         <p class="form__error" *ngIf="formContactMe.get('email')?.errors?.['required'] && formContactMe.get('email')?.touched">
           Email is required.
         </p>
@@ -26,7 +26,7 @@
 
       <div class="form__item form__item--area">
         <label class="form__label" for="message">Mensaje</label>
-        <textarea class="form__textarea" name="Message" id="message" cols="30" rows="10" formControlName="message" type="textarea"></textarea>
+        <textarea class="form__textarea" name="Message" id="message" cols="30" rows="10" formControlName="message" type="textarea" name="message"></textarea>
         <p class="form__error" *ngIf="formContactMe.get('message')?.errors?.['required'] && formContactMe.get('message')?.touched">
           Message is required.
         </p>
