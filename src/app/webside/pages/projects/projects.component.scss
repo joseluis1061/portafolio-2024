@@ -51,7 +51,6 @@
   .card {
     height: 400px;
     overflow: hidden;
-
     & .card-image-wrapper {
       height: 135%;
       will-change: transform;
@@ -127,6 +126,7 @@
     .card {
       height: 400px;
       overflow: hidden;
+      font-size: 12px;
 
       & .card-image-wrapper {
         height: 135%;

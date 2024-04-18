@@ -5,7 +5,7 @@ export const PROJECTS_DATA: Projects[] = [
     name: 'Fanta',
     github: 'https://github.com/joseluis1061/FantaAngular',
     web: 'https://fantascroll.netlify.app',
-    resume: 'Landing page con animaciones en GSAP. Diseño centrado en Desktop con movimiento de elementos para una pagina promocional. Combina la manipulación de elementos y la reactividad',
+    resume: 'Landing page con animaciones en GSAP. Diseño centrado en Desktop con movimiento de elementos por scroll.',
     type: 'landing',
     cover: '../../../../../assets/svg/projects/project-fanta.svg',
     technologies: ['Angular', 'GSAP', 'TypeScript']
@@ -35,7 +35,7 @@ export const PROJECTS_DATA: Projects[] = [
     name: 'Wordle',
     github: 'https://github.com/joseluis1061/wordle',
     web: 'https://visionary-blancmange-e764a6.netlify.app/',
-    resume: 'Pon tu mente a prueba adivina la palabra oculta en 6 intentos. Juego desarrollado con las tecnologias base de la web Html, Css y Java Script',
+    resume: 'Pon tu mente a prueba adivina la palabra oculta en 6 intentos. Desarrollado con Html, Css y Java Script',
     type: 'game',
     cover: '../../../../../assets/svg/projects/wordle.svg',
     technologies: ['Html', 'CSS', 'Java Scrip']

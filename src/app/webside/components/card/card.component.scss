@@ -6,6 +6,10 @@
   position: relative;
   cursor: pointer;
 
+  p{
+    font-size: 16px;
+  }
+
   &:hover{
     .card__overlay{
       left: 0;
