@@ -34,8 +34,7 @@
     align-items: center;
     gap: 1em;
 
-
-
+    margin-top: 25px;
     &__item{
       width: 100%;
     }
@@ -43,6 +42,7 @@
       width: 80px;
       align-self: flex-start;
       color: white;
+      margin: 15px 0;
     }
     &__input,
     &__textarea{
