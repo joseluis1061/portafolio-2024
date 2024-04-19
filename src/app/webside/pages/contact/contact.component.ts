@@ -77,7 +77,6 @@ export class ContactComponent implements OnInit{
         "email": this.eliminarScript(email),
         "message": this.eliminarScript(message)
       })
-      console.log(this.formContactMe.value)
       this.mailSend = true;
       const res = await fetch("/.netlify/functions/formularioContacto", {
         method: "POST",
@@ -86,7 +85,9 @@ export class ContactComponent implements OnInit{
         },
         body: JSON.stringify(this.formContactMe.value)
       })
-      this.mailSend = false;
+      setTimeout(()=> {
+        this.mailSend = false;
+      }, 2000)
       // Exitoso
     }
 
