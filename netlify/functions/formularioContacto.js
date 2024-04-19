@@ -30,10 +30,10 @@ function enviarMail(){
 }
 
 function generarCuerpoMensaje(params) {
-  return `Formulario de contacto enviado por ${params.name} - ${params.email}.
-  El mensaje es el siguiente:
-  ${params.message}
-  `;
+return `Formulario de contacto enviado por ${params.name} - ${params.email}.
+El mensaje es el siguiente:
+${params.message}
+`;
 }
 
 exports.handler = async (event, context) => {
@@ -41,12 +41,16 @@ exports.handler = async (event, context) => {
     case "POST":
       const params = JSON.parse(event.body);
       console.log("Recibi una solicitud con estos parametros: ", params);
-      return await enviarMail({
-        from: process.env.EMAIL_USER,
-        to: "joseluis836@hotmail.com",
-        subject: "CONTACTO - FRONTEND PORTAFOLIO",
-        html: generarCuerpoMensaje(params)
-      });
+      return{
+        statusCode: 200,
+        message: "Mensaje enviado: " + params
+      };
+      // return await enviarMail({
+      //   from: process.env.EMAIL_USER,
+      //   to: "joseluis836@hotmail.com",
+      //   subject: "CONTACTO - FRONTEND PORTAFOLIO",
+      //   html: generarCuerpoMensaje(params)
+      // });
     default:
       return{
         statusCode: 405,
