@@ -70,8 +70,14 @@ export class ContactComponent implements OnInit{
   async enviarMensaje(e: SubmitEvent){
     e.preventDefault();
     if(this.formContactMe.valid){
-      const {message} = this.formContactMe.getRawValue();
-      this.formContactMe.setValue({"message": this.eliminarScript(message)})
+      const {name, email, message} = this.formContactMe.getRawValue();
+
+      this.formContactMe.setValue({
+        "name": this.eliminarScript(name),
+        "email": this.eliminarScript(email),
+        "message": this.eliminarScript(message)
+      })
+      console.log(this.formContactMe.value)
       this.mailSend = true;
       const res = await fetch("/.netlify/functions/formularioContacto", {
         method: "POST",

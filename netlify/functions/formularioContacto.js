@@ -5,7 +5,7 @@ config();
 
 const trasnport = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
-  port: 465,
+  port: 587,
   secure: true,
   auth: {
     user: process.env.EMAIL_USER,
@@ -45,12 +45,12 @@ exports.handler = async (event, context) => {
         statusCode: 200,
         message: "Mensaje enviado: " + params
       };
-      // return await enviarMail({
-      //   from: process.env.EMAIL_USER,
-      //   to: "joseluis836@hotmail.com",
-      //   subject: "CONTACTO - FRONTEND PORTAFOLIO",
-      //   html: generarCuerpoMensaje(params)
-      // });
+      return await enviarMail({
+        from: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER,
+        subject: "CONTACTO - FRONTEND PORTAFOLIO",
+        html: generarCuerpoMensaje(params)
+      });
     default:
       return{
         statusCode: 405,
