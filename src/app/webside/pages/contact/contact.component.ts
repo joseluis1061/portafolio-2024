@@ -68,7 +68,7 @@ export class ContactComponent implements OnInit{
       const res = await fetch("/.netlify/functions/formularioContacto", {
         method: "POST",
         headers: {
-          "Content-Type": "applicarion/json"
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(this.formContactMe.value)
       })
