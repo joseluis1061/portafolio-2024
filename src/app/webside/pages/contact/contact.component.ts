@@ -61,9 +61,17 @@ export class ContactComponent implements OnInit{
     })*/
   }
 
+  eliminarScript(texto: string): string {
+    let textoLimpio = texto.replace(/<script>/gi, '');
+    textoLimpio = textoLimpio.replace(/<\/script>/gi, '');
+    return textoLimpio;
+  }
+
   async enviarMensaje(e: SubmitEvent){
     e.preventDefault();
     if(this.formContactMe.valid){
+      const {message} = this.formContactMe.getRawValue();
+      this.formContactMe.setValue({"message": this.eliminarScript(message)})
       this.mailSend = true;
       const res = await fetch("/.netlify/functions/formularioContacto", {
         method: "POST",
