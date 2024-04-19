@@ -64,9 +64,18 @@ export class ContactComponent implements OnInit{
   async enviarMensaje(e: SubmitEvent){
     e.preventDefault();
 
-    this.mailSend = true;
-    // Fetch
-    this.mailSend = false;
-    // Exitoso
+    if(this.formContactMe.valid){
+      this.mailSend = true;
+      const res = await fetch("/.netlify/functions/formularioContacto", {
+        method: "POST",
+        headers: {
+          "Content-Type": "applicarion/json"
+        },
+        body: JSON.stringify(this.formContactMe.value)
+      })
+      this.mailSend = false;
+      // Exitoso
+    }
+
   }
 }

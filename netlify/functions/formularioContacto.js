@@ -1,4 +1,4 @@
-exports.handler = async (event, context){
+exports.handler = async (event, context) => {
   switch(event.httpMethod){
     case "POST":
       const params = JSON.parse(event.body);
