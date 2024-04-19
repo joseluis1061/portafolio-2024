@@ -60,4 +60,13 @@ export class ContactComponent implements OnInit{
       }
     })*/
   }
+
+  async enviarMensaje(e: SubmitEvent){
+    e.preventDefault();
+
+    this.mailSend = true;
+    // Fetch
+    this.mailSend = false;
+    // Exitoso
+  }
 }
