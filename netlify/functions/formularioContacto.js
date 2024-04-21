@@ -46,7 +46,7 @@ exports.handler = async (event, context) => {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
         subject: "CONTACTO - FRONTEND PORTAFOLIO",
-        text: generarCuerpoMensaje(params)
+        text: "Mensaje de prueba"
       });
     default:
       return{
