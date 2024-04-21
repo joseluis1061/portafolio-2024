@@ -87,6 +87,7 @@ export class ContactComponent implements OnInit{
       })
       setTimeout(()=> {
         this.mailSend = false;
+        this.formContactMe.reset();
       }, 2000)
       // Exitoso
     }
