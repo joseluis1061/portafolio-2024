@@ -41,6 +41,8 @@ exports.handler = async (event, context) => {
     case "POST":
       const params = JSON.parse(event.body);
       console.log("Recibi una solicitud con estos parametros: ", params);
+      console.log(process.env.EMAIL_USER);
+      console.log(process.env.EMAIL_HOST);
       // return{
       //   statusCode: 200,
       //   message: "Mensaje enviado: " + params
