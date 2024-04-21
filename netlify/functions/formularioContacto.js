@@ -20,7 +20,7 @@ function enviarMail(mail){
         error
           ? reject({
             statusCode: 500,
-            body: error.message
+            body: JSON.stringify(error.message)
           })
           : resolve({
             statusCode: 200,
