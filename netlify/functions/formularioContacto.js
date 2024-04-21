@@ -13,7 +13,7 @@ const trasnport = nodemailer.createTransport({
   }
 });
 
-function enviarMail(){
+function enviarMail(mail){
   return new Promise((resolve, reject) => {
     trasnport.sendMail(mail, (error,_ ) => {
       error
@@ -41,12 +41,6 @@ exports.handler = async (event, context) => {
     case "POST":
       const params = JSON.parse(event.body);
       console.log("Recibi una solicitud con estos parametros: ", params);
-      console.log(process.env.EMAIL_USER);
-      console.log(process.env.EMAIL_HOST);
-      // return{
-      //   statusCode: 200,
-      //   message: "Mensaje enviado: " + params
-      // };
       return await enviarMail({
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
