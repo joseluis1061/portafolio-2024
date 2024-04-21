@@ -30,45 +30,13 @@ export class ContactComponent implements OnInit{
     this.initFormParent();
   }
 
-  onSubmit() {
-
-    if(this.formContactMe.valid){
-      this.mailSend = true;
-      setTimeout(()=> {
-        this.mailSend = false;
-        this.formContactMe.reset();
-      }, 3000)
-    }else{
-      this.failInputs = true;
-      setTimeout(()=> {
-        this.failInputs = false;
-      }, 3000)
-    }
-
-    /*
-    this.formServise.submitForm(this.formContactMe.value).subscribe({
-      next: () => {
-        this.formContactMe.reset();
-        console.log("Envio de correo");
-        this.mailSend = true;
-        setTimeout(()=> {
-          this.mailSend = false;
-        }, 1000)
-      },
-      error: error => {
-        console.log(error)
-        this.mailSend = false;
-      }
-    })*/
-  }
-
   eliminarScript(texto: string): string {
     let textoLimpio = texto.replace(/<script>/gi, '');
     textoLimpio = textoLimpio.replace(/<\/script>/gi, '');
     return textoLimpio;
   }
 
-  async enviarMensaje(e: SubmitEvent){
+  async sendMessage(e: SubmitEvent){
     e.preventDefault();
     if(this.formContactMe.valid){
       const {name, email, message} = this.formContactMe.getRawValue();
@@ -87,7 +55,6 @@ export class ContactComponent implements OnInit{
         body: JSON.stringify(this.formContactMe.value)
       })
 
-      console.log("Respuesta", res)
       if(res.status === 200){
         // Exitoso
         this.mailSend = true;

@@ -102,6 +102,12 @@
       color: var(--red-danger);
       margin: 0;
     }
+    &__success{
+      display: block;
+      width: 100%;
+      color: var(--success);
+      margin: 0;
+    }
   }
 
   @media (min-width: 768px) {

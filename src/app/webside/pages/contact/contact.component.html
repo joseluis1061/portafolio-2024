@@ -9,7 +9,7 @@
     <form
       [formGroup]="formContactMe"
       class="form"
-      (ngSubmit)="enviarMensaje($event)"
+      (ngSubmit)="sendMessage($event)"
     >
       <!-- <input type="hidden" name="formContactMe" value="formContactMe"> -->
       <div class="form__item">
@@ -38,10 +38,10 @@
       </div>
 
       <div data-netlify-recaptcha="true"></div>
-      <p *ngIf="mailSend">Su correo se envio de manera exitosa.</p>
-      <p *ngIf="mailFail">Upps el correo no se ha podido entregar intentalo de nuevo.</p>
+      <p *ngIf="mailSend" class="form__success">Su correo se envio de manera exitosa.</p>
+      <p *ngIf="mailFail" class="form__error">Upps el correo no se ha podido entregar intentalo de nuevo.</p>
       <p *ngIf="failInputs">Todos los campos son obligatorios.</p>
-      <button type="submit" class="form__btn">
+      <button type="submit" class="form__btn" *ngIf="!mailSend">
         Enviar
       </button>
     </form>
