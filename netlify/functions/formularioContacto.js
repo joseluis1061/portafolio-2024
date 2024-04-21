@@ -6,22 +6,21 @@ config();
 const trasnport = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
   port: 587,
-  secure: true,
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWROD,
+    pass: process.env.EMAIL_PASSWORD,
   }
 });
 
 function enviarMail(mail){
-  console.log("Ingresa a enviar email")
   return new Promise((resolve, reject) => {
     trasnport.sendMail(mail,
       (error, _) => {
         error
           ? reject({
             statusCode: 500,
-            body: error
+            body: error.message
           })
           : resolve({
             statusCode: 200,
@@ -47,7 +46,7 @@ exports.handler = async (event, context) => {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
         subject: "CONTACTO - FRONTEND PORTAFOLIO",
-        text: "Mensaje de prueba"
+        text: generarCuerpoMensaje(params)
       });
     default:
       return{
