@@ -15,16 +15,17 @@ const trasnport = nodemailer.createTransport({
 
 function enviarMail(mail){
   return new Promise((resolve, reject) => {
-    trasnport.sendMail(mail, (error,_ ) => {
-      error
-        ? reject({
-          statusCode: 500,
-          body: error
-        })
-        : resolve({
-          statusCode: 200,
-          body: "Email enviado con exito a: " + mail.to
-        })
+    trasnport.sendMail(mail,
+      (error, _) => {
+        error
+          ? reject({
+            statusCode: 500,
+            body: error
+          })
+          : resolve({
+            statusCode: 200,
+            body: "Email enviado con exito a: " + mail.to
+          })
     })
   })
 }
@@ -45,7 +46,7 @@ exports.handler = async (event, context) => {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
         subject: "CONTACTO - FRONTEND PORTAFOLIO",
-        html: generarCuerpoMensaje(params)
+        text: generarCuerpoMensaje(params)
       });
     default:
       return{
