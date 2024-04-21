@@ -20,7 +20,7 @@ function enviarMail(mail){
         error
           ? reject({
             statusCode: 500,
-            body: JSON.stringify(error.message)
+            body: "Error en el envio de correo"
           })
           : resolve({
             statusCode: 200,
@@ -42,6 +42,9 @@ exports.handler = async (event, context) => {
     case "POST":
       const params = JSON.parse(event.body);
       console.log("Recibi una solicitud con estos parametros: ", params);
+      console.log("EMAIL_USER: ", process.env.EMAIL_USER);
+      console.log("EMAIL_PASSWORD: ", process.env.EMAIL_PASSWORD);
+      console.log("EMAIL_HOST: ", process.env.EMAIL_HOST);
       return await enviarMail({
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
