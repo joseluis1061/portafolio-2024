@@ -14,6 +14,7 @@ const trasnport = nodemailer.createTransport({
 });
 
 function enviarMail(mail){
+  console.log("Ingresa a enviar email")
   return new Promise((resolve, reject) => {
     trasnport.sendMail(mail,
       (error, _) => {
