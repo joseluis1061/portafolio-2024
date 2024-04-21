@@ -39,6 +39,7 @@
 
       <div data-netlify-recaptcha="true"></div>
       <p *ngIf="mailSend">Su correo se envio de manera exitosa.</p>
+      <p *ngIf="mailFail">Upps el correo no se ha podido entregar intentalo de nuevo.</p>
       <p *ngIf="failInputs">Todos los campos son obligatorios.</p>
       <button type="submit" class="form__btn">
         Enviar

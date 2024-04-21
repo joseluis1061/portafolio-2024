@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit{
   formContactMe: FormGroup = new FormGroup({});
 
   mailSend: boolean = false;
+  mailFail: boolean = false;
   failInputs: boolean = false;
 
   initFormParent(): void {
@@ -77,7 +78,7 @@ export class ContactComponent implements OnInit{
         "email": this.eliminarScript(email),
         "message": this.eliminarScript(message)
       })
-      this.mailSend = true;
+
       const res = await fetch("/.netlify/functions/formularioContacto", {
         method: "POST",
         headers: {
@@ -85,12 +86,21 @@ export class ContactComponent implements OnInit{
         },
         body: JSON.stringify(this.formContactMe.value)
       })
-      setTimeout(()=> {
-        this.mailSend = false;
-        this.formContactMe.reset();
-      }, 2000)
-      // Exitoso
-    }
 
+      console.log("Respuesta", res)
+      if(res.status === 200){
+        // Exitoso
+        this.mailSend = true;
+        setTimeout(()=> {
+          this.mailSend = false;
+          this.formContactMe.reset();
+        }, 2000)
+      }else{
+        this.mailFail = true;
+        setTimeout(()=> {
+          this.mailFail = false;
+        }, 2000)
+      }
+    }
   }
 }
