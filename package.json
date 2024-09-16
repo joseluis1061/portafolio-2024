@@ -35,6 +35,7 @@
     "material": "^0.9.8",
     "material-icons": "^1.13.12",
     "nodemailer": "^6.9.13",
+    "portafolio2024": "file:",
     "rxjs": "~7.8.0",
     "sharp": "^0.33.3",
     "tslib": "^2.3.0",
