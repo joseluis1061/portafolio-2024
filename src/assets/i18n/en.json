@@ -36,44 +36,54 @@
     "job_title": "Jobs",
     "jobs":[
       {
-        "title": "Tangible design / Desarrollo Frontend",
+        "title": "Tangible Design / Frontend Development",
         "descriptions": [
           "Landing Page - Angular.",
-          "Programación de módulos y componentes - Angular.",
-          "Actualización de versiones - Angular."
+          "Module and component programming - Angular.",
+          "Version updates - Angular."
         ]
       },
       {
-        "title": "Iot Latam Tower /Desarrollo Software",
+        "title": "Iot Latam Tower / Software Development",
         "descriptions": [
-          "Creación y actualización de componentes - Angular.",
-          "Actualización de funcionalidades backend - Django.",
-          "Desarrollo de aplicación sistema de permisos - React.",
-          "Desarrollo de aplicación web scraping centralización de información - Electron JS / Puppeter."
+          "Creation and updating of components - Angular.",
+          "Backend functionality updates - Django.",
+          "Permission system application development - React.",
+          "Web scraping application development for information centralization - Electron JS / Puppeteer."
         ]
       },
       {
-        "title": "Universidad de Antioquia / Auxiliar de investigación",
+        "title": "University of Antioquia / Research Assistant",
         "descriptions": [
-          "Desarrollo de modelos predictivos - Python, Keras, Pandas",
-          "Desarrollo de circuitos electrónicos - Altium Designer"
+          "Development of predictive models - Python, Keras, Pandas.",
+          "Development of electronic circuits - Altium Designer."
         ]
       },
       {
-        "title": "IOT - Latam / Desarrollo de software - hardaware",
+        "title": "IOT - Latam / Software and Hardware Development",
         "descriptions": [
-          "Desarrollo de componentes en React JS plataforma IOT",
-          "Monitoreo de plataforma IOT",
-          "Desarrollo prototipos electrónicos"
+          "Development of components in React JS for IOT platform.",
+          "Monitoring of IOT platform.",
+          "Development of electronic prototypes."
         ]
       },
       {
-        "title": "Intecol SAS / Desarrollo sistemas de control - Visión artificial",
+        "title": "Intecol SAS / Control Systems Development - Machine Vision",
         "descriptions": [
-          "Programación de sensores de visión artificial.",
-          "Diseño de sistemas de control de calidad y automatización."
+          "Programming of machine vision sensors.",
+          "Design of quality control and automation systems."
         ]
       }
     ]
+  },
+
+  "contact": {
+    "title": "Contact me",
+    "paragraph_1": "Contactame y hablemos de nuestro proximo trabajo. Envia un correo o contactame por ",
+    "a_linkedin": "Linkendin",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "form_btn": "Send"
   }
 }
