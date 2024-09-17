@@ -1,28 +1,29 @@
 <section class="experience" id="experience">
   <div class="experience__container">
-    <h2 class="experience__h2">Experiencia</h2>
+    <h2 class="experience__h2">{{'experience.title' | translate}}</h2>
     <div class="experience__coulmns">
       <div class="experience__formation">
-        <h3 class="experiencia__h3">Educación</h3>
+        <h3 class="experiencia__h3">{{'experience.education_title' | translate}}</h3>
 
-        <div class="experience__card">
-          <h4 class="experience__h4">Profesional - Universidad del Cauca</h4>
+        <div class="experience__card" *ngFor="let education of educations">
+          <h4 class="experience__h4">{{education.title | translate}}</h4>
           <ul class="experience__ul">
-            <li class="experience__li">Ingeniero Físico </li>
-          </ul>
-        </div>
-
-        <div class="experience__card">
-          <h4 class="experience__h4">Técnico - Comfacauca / Sena</h4>
-          <ul class="experience__ul">
-            <li class="experience__li">Aseguramiento de calidad del software </li>
+            <li class="experience__li">{{education.description| translate}}</li>
           </ul>
         </div>
       </div>
-      <div class="experience__jobs">
-        <h3 class="experiencia__h2">Laboral</h3>
 
-        <div class="experience__card">
+      <div class="experience__jobs" *ngIf="jobs">
+        <h3 class="experiencia__h2">{{'experience.job_title' | translate}}</h3>
+
+        <div class="experience__card" *ngFor="let job of jobs">
+          <h4 class="experience__h4">{{job.title | translate}}</h4>
+          <ul class="experience__ul">
+            <li class="experience__li" *ngFor="let description of job.descriptions">{{description | translate}}</li>
+          </ul>
+        </div>
+
+        <!-- <div class="experience__card">
           <h4 class="experience__h4">Tangible design / Desarrollo Frontend</h4>
           <ul class="experience__ul">
             <li class="experience__li">Landing Page - Angular. </li>
@@ -64,7 +65,7 @@
             <li class="experience__li">Programación de sensores de visión artificial.</li>
             <li class="experience__li">Diseño de sistemas de control de calidad y automatización</li>
           </ul>
-        </div>
+        </div> -->
 
       </div>
     </div>

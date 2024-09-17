@@ -8,6 +8,7 @@
       *ngFor="let option of options"
       class="language-option"
       (click)="onChange(option.value)">
+
       <img [src]="option.src" [alt]="option.display">
       <span>{{ option.display }}</span>
     </div>

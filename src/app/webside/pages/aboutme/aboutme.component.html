@@ -2,10 +2,10 @@
   <div class="section-container">
     <div class="resume">
 
-      <h2>{{ 'about_me_title' | translate }}</h2>
-      <p class="aboutme__p">{{ 'about_me_paragraph_1' | translate }}</p>
-      <p class="aboutme__p">{{ 'about_me_paragraph_2' | translate }}</p>
-      <p class="aboutme__p">{{ 'about_me_paragraph_3' | translate }}</p>
+      <h2>{{ 'about_me.title' | translate }}</h2>
+      <p class="aboutme__p">{{ 'about_me.paragraph_1' | translate }}</p>
+      <p class="aboutme__p">{{ 'about_me.paragraph_2' | translate }}</p>
+      <p class="aboutme__p">{{ 'about_me.paragraph_3' | translate }}</p>
       <!-- Aplicando principios solid -->
       <div class="soft-skills">
         <label *ngFor="let soft_skill of soft_skills" class="skill" for="name">
@@ -16,7 +16,7 @@
     </div>
 
     <div class="skills-container">
-      <h2>{{'skills_title' | translate}}</h2>
+      <h2>{{'about_me.skills_title' | translate}}</h2>
       <div class="skills-list">
         <label class="skill" for="name">
           <i class="fa-brands fa-angular"></i>
