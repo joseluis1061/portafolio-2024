@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-switch-languages',
   templateUrl: './switch-languages.component.html',
@@ -7,18 +8,39 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class SwitchLanguagesComponent {
   options = [
-    {value: 'en', display: 'English'},
-    {value: 'es', display: 'Español'}
+    {value: 'en', display: 'English', src:'../../../../assets/flags/usa.svg'},
+    {value: 'es', display: 'Español', src:'../../../../assets/flags/spain.svg'}
   ];
 
-  constructor(private translate: TranslateService){};
+  selectedLang: string;
+  selectedOption: any;
+  dropdownOpen = false;
 
-  onChange(event: Event){
-    const lang = (event.target as HTMLSelectElement).value;
-    console.log("Selección: ", lang);
-    this.translate.use(lang);
-    console.log("Idioma: ", this.translate.currentLang)
+  constructor(private translate: TranslateService) {
+    this.selectedOption = this.options.find(option => option.value === (this.translate.currentLang || this.translate.getDefaultLang()));
+    this.selectedLang = this.selectedOption.value;
   }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  onChange(lang: string) {
+    this.translate.use(lang);
+    this.selectedLang = lang;
+    this.selectedOption = this.options.find(option => option.value === lang);
+    this.dropdownOpen = false;
+    console.log("Idioma: ", this.translate.currentLang);
+    this.toggleDropdown();
+  }
+
+  // onChange(event: Event) {
+  //   const lang = (event.target as HTMLSelectElement).value;
+  //   this.translate.use(lang);
+  //   this.selectedLang = lang;
+  //   console.log("Idioma: ", this.translate.currentLang);
+  // }
+
 
 
 }

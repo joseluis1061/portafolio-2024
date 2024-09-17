@@ -1,3 +1,16 @@
 {
-  "Hellow": "Hola mundo"
+  "Hellow": "Hellow",
+
+  "about_me_title": "Acerca de mí",
+  "about_me_paragraph_1": "Hola, soy Jose Luis Zúñiga, soy ingeniero físico y desarrollador de software con conocimientos técnicos en Angular para el Frontend, Java para el backend.",
+  "about_me_paragraph_2": "Cuento con otras experiencias como desarrollador de software, en aplicaciones de visión artificial (Python) para la automatización drivers para microcontroladores.",
+  "about_me_paragraph_3": "Participo en diferentes etapas del desarrollo del software desde el levantamiento de requerimientos con los stakeholders, desarrollo de la aplicación, pruebas, despliegue, manteniemiento.",
+  "soft_skills_title": "Soft Skills",
+  "soft_skills": [
+    { "icon": "fa-solid fa-brain", "text": "Planeación" },
+    { "icon": "fa-solid fa-handshake-angle", "text": "Colaboración" },
+    { "icon": "fa-solid fa-dice", "text": "Dinamico" },
+    { "icon": "fa-solid fa-dna", "text": "Evolutivo" }
+  ],
+  "skills_title": "Habilidades"
 }

@@ -1,3 +1,16 @@
 {
-  "Hellow": "Hellow"
+  "Hellow": "Hellow",
+
+  "about_me_title": "About me",
+  "about_me_paragraph_1": "Hi, I'm Jose Luis Zúñiga, a software developer with expertise in Angular for the frontend and Java for the backend.",
+  "about_me_paragraph_2": "I have experience in software development, including applications in computer vision (Python) for industrial automation and developing drivers for microcontrollers.",
+  "about_me_paragraph_3": "I participate in different stages of software development, from gathering requirements with stakeholders, application development, testing, deployment, and maintenance",
+  "soft_skills_title": "Soft Skills",
+  "soft_skills": [
+    { "icon": "fa-solid fa-brain", "text": "Planning" },
+    { "icon": "fa-solid fa-handshake-angle", "text": "Collaboration" },
+    { "icon": "fa-solid fa-dice", "text": "Dynamic" },
+    { "icon": "fa-solid fa-dna", "text": "Evolutionary" }
+  ],
+  "skills_title": "My Skills"
 }

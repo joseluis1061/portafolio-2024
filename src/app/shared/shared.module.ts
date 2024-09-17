@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ImgComponent } from './components/img/img.component';
 import { SwitchLanguagesComponent } from './components/switch-languages/switch-languages.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SwitchLanguagesComponent } from './components/switch-languages/switch-l
     SwitchLanguagesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
