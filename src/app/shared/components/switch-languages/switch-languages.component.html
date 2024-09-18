@@ -1,0 +1,16 @@
+<div class="dropdown" (click)="toggleDropdown()">
+  <div class="selected-option">
+    <img [src]="selectedOption.src" [alt]="selectedOption.display">
+    <span>{{ selectedOption.display }}</span>
+  </div>
+  <div class="dropdown-options" *ngIf="dropdownOpen">
+    <div
+      *ngFor="let option of options"
+      class="language-option"
+      (click)="onChange(option.value)">
+
+      <img [src]="option.src" [alt]="option.display">
+      <span>{{ option.display }}</span>
+    </div>
+  </div>
+</div>

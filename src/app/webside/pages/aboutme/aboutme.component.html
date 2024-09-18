@@ -1,42 +1,22 @@
 <section class="aboutme" id="aboutme" #aboutme>
   <div class="section-container">
     <div class="resume">
-      <h2>About me</h2>
-      <p class="aboutme__p">
-        Hola, soy Jose Luis Zúñiga, soy ingeniero físico y desarrollador de software con conocimientos técnicos en Angular para el Frontend, Java para el backend.
-      </p>
-      <p class="aboutme__p">
-        Cuento con otras experiencias como desarrollador de software, en aplicaciones de visión artificial (Python) para la automatización industrial y el desarrollo de drivers para microcontroladores.
-      </p>
-      <p class="aboutme__p">
-        Participo en diferentes etapas del desarrollo del software desde el levantamiento de requerimientos con los stakeholders, desarrollo de la aplicación, pruebas, despliegue, manteniemiento.
-        <!-- Aplicando principios solid -->
-      </p>
+
+      <h2>{{ 'about_me.title' | translate }}</h2>
+      <p class="aboutme__p">{{ 'about_me.paragraph_1' | translate }}</p>
+      <p class="aboutme__p">{{ 'about_me.paragraph_2' | translate }}</p>
+      <p class="aboutme__p">{{ 'about_me.paragraph_3' | translate }}</p>
+      <!-- Aplicando principios solid -->
       <div class="soft-skills">
-        <label class="skill" for="name">
-          <i class="fa-solid fa-brain"></i>
-          <p>Planeación</p>
-        </label>
-
-        <label class="skill" for="name">
-          <i class="fa-solid fa-handshake-angle"></i>
-          <p>Colaboración</p>
-        </label>
-
-        <label class="skill" for="name">
-          <i class="fa-solid fa-dice"></i>
-          <p>Dinamico</p>
-        </label>
-
-        <label class="skill" for="name">
-          <i class="fa-solid fa-dna"></i>
-          <p>Evolutivo</p>
+        <label *ngFor="let soft_skill of soft_skills" class="skill" for="name">
+          <i [class]="soft_skill.icon"></i>
+          <p>{{ soft_skill.text | translate }}</p>
         </label>
       </div>
     </div>
 
     <div class="skills-container">
-      <h2>My Skills</h2>
+      <h2>{{'about_me.skills_title' | translate}}</h2>
       <div class="skills-list">
         <label class="skill" for="name">
           <i class="fa-brands fa-angular"></i>
@@ -63,29 +43,44 @@
           <p>CSS</p>
         </label>
 
-
         <label class="skill" for="name">
           <i class="fa-brands fa-python"></i>
           <p>Python</p>
         </label>
 
         <label class="skill" for="name">
-          <i><img src="../../../../assets/svg/icons/typescript-100.svg" alt="skill logo" loading="lazy" decoding="async"></i>
+          <i
+            ><img
+              src="../../../../assets/svg/icons/typescript-100.svg"
+              alt="skill logo"
+              loading="lazy"
+              decoding="async"
+          /></i>
           <p>Typescript</p>
         </label>
 
         <label class="skill" for="name">
-          <i><img src="../../../../assets/svg/icons/django.svg" alt="skill logo" loading="lazy" decoding="async"></i>
+          <i
+            ><img
+              src="../../../../assets/svg/icons/django.svg"
+              alt="skill logo"
+              loading="lazy"
+              decoding="async"
+          /></i>
           <p>Django</p>
         </label>
 
         <label class="skill" for="name">
-          <i><img src="../../../../assets/svg/icons/gsap.svg" alt="skill logo" loading="lazy" decoding="async"></i>
+          <i
+            ><img
+              src="../../../../assets/svg/icons/gsap.svg"
+              alt="skill logo"
+              loading="lazy"
+              decoding="async"
+          /></i>
           <p>GSAP</p>
         </label>
-
       </div>
-
     </div>
   </div>
 </section>

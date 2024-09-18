@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { FormService } from 'src/app/services/form.service';
 
 @Component({
@@ -23,6 +24,7 @@ export class ContactComponent implements OnInit{
   }
 
   constructor(
+    private translate: TranslateService,
     private formServise: FormService
   ){}
 

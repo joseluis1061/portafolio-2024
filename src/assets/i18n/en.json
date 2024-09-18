@@ -1,0 +1,90 @@
+{
+  "hellow": "Hellow english",
+  "about_me": {
+    "title": "About me",
+    "paragraph_1": "Hi, I'm Jose Luis Zúñiga, a software developer with expertise in Angular for the frontend and Java for the backend.",
+    "paragraph_2": "I have experience in software development, including applications in computer vision (Python) for industrial automation and developing drivers for microcontrollers.",
+    "paragraph_3": "I participate in different stages of software development, from gathering requirements with stakeholders, application development, testing, deployment, and maintenance",
+    "soft_skills_title": "Soft Skills",
+    "soft_skills": [
+      { "icon": "fa-solid fa-brain", "text": "Planning" },
+      { "icon": "fa-solid fa-handshake-angle", "text": "Collaboration" },
+      { "icon": "fa-solid fa-dice", "text": "Dynamic" },
+      { "icon": "fa-solid fa-dna", "text": "Evolutionary" }
+    ],
+    "skills_title": "My Skills"
+  },
+
+  "projects":{
+    "title": "Projects",
+    "paragraph_1": "Explore my projects. You can review their code and how they work online.",
+    "paragraph_2": "<strong style='color:red;'>Contact</strong> me to learn more about me.."
+  },
+
+  "experience":{
+    "title": "Experience",
+    "education_title": "Education",
+    "education":[
+      {
+        "title": "Professional - Universidad del Cauca",
+        "description": "Physical Engineer"
+      },
+      {
+        "title": "Technical - Comfacauca / Sena",
+        "description": "Software Quality Assurance"
+      }
+    ],
+    "job_title": "Jobs",
+    "jobs":[
+      {
+        "title": "Tangible Design / Frontend Development",
+        "descriptions": [
+          "Landing Page - Angular.",
+          "Module and component programming - Angular.",
+          "Version updates - Angular."
+        ]
+      },
+      {
+        "title": "Iot Latam Tower / Software Development",
+        "descriptions": [
+          "Creation and updating of components - Angular.",
+          "Backend functionality updates - Django.",
+          "Permission system application development - React.",
+          "Web scraping application development for information centralization - Electron JS / Puppeteer."
+        ]
+      },
+      {
+        "title": "University of Antioquia / Research Assistant",
+        "descriptions": [
+          "Development of predictive models - Python, Keras, Pandas.",
+          "Development of electronic circuits - Altium Designer."
+        ]
+      },
+      {
+        "title": "IOT - Latam / Software and Hardware Development",
+        "descriptions": [
+          "Development of components in React JS for IOT platform.",
+          "Monitoring of IOT platform.",
+          "Development of electronic prototypes."
+        ]
+      },
+      {
+        "title": "Intecol SAS / Control Systems Development - Machine Vision",
+        "descriptions": [
+          "Programming of machine vision sensors.",
+          "Design of quality control and automation systems."
+        ]
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contact me",
+    "paragraph_1": "Contactame y hablemos de nuestro proximo trabajo. Envia un correo o contactame por ",
+    "a_linkedin": "Linkendin",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "form_btn": "Send"
+  }
+}

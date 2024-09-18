@@ -1,0 +1,91 @@
+{
+  "hellow": "Hola en Español",
+  "about_me": {
+    "title": "Acerca de mí",
+    "paragraph_1": "Hola, soy Jose Luis Zúñiga, soy ingeniero físico y desarrollador de software con conocimientos técnicos en Angular para el Frontend, Java para el backend.",
+    "paragraph_2": "Cuento con otras experiencias como desarrollador de software, en aplicaciones de visión artificial (Python) para la automatización drivers para microcontroladores.",
+    "paragraph_3": "Participo en diferentes etapas del desarrollo del software desde el levantamiento de requerimientos con los stakeholders, desarrollo de la aplicación, pruebas, despliegue, manteniemiento.",
+    "soft_skills_title": "Soft Skills",
+    "soft_skills": [
+      { "icon": "fa-solid fa-brain", "text": "Planeación" },
+      { "icon": "fa-solid fa-handshake-angle", "text": "Colaboración" },
+      { "icon": "fa-solid fa-dice", "text": "Dinamico" },
+      { "icon": "fa-solid fa-dna", "text": "Evolutivo" }
+    ],
+    "skills_title": "Habilidades"
+  },
+  "projects":{
+    "title": "Proyectos",
+    "paragraph_1": "Explora mis projectos puedes revisar su código y su funcionamiento en línea",
+    "paragraph_2": "<strong style='color:red;'>Contactame</strong> para saber más acerca de mí."
+  },
+
+  "experience":{
+    "title": "Experiencia",
+    "education_title": "Educación",
+    "education":[
+      {
+        "title": "Profesional - Universidad del Cauca",
+        "description": "Ingeniero Físico"
+      },
+      {
+        "title": "Técnico - Comfacauca / Sena",
+        "description": "Aseguramiento de calidad del softwareo"
+      }
+    ],
+    "job_title": "Laboral",
+    "jobs":[
+      {
+        "title": "Tangible design / Desarrollo Frontend",
+        "descriptions": [
+          "Landing Page - Angular.",
+          "Programación de módulos y componentes - Angular.",
+          "Actualización de versiones - Angular."
+        ]
+      },
+      {
+        "title": "Iot Latam Tower /Desarrollo Software",
+        "descriptions": [
+          "Creación y actualización de componentes - Angular.",
+          "Actualización de funcionalidades backend - Django.",
+          "Desarrollo de aplicación sistema de permisos - React.",
+          "Desarrollo de aplicación web scraping centralización de información - Electron JS / Puppeter."
+        ]
+      },
+      {
+        "title": "Universidad de Antioquia / Auxiliar de investigación",
+        "descriptions": [
+          "Desarrollo de modelos predictivos - Python, Keras, Pandas",
+          "Desarrollo de circuitos electrónicos - Altium Designer"
+        ]
+      },
+      {
+        "title": "IOT - Latam / Desarrollo de software - hardaware",
+        "descriptions": [
+          "Desarrollo de componentes en React JS plataforma IOT",
+          "Monitoreo de plataforma IOT",
+          "Desarrollo prototipos electrónicos"
+        ]
+      },
+      {
+        "title": "Intecol SAS / Desarrollo sistemas de control - Visión artificial",
+        "descriptions": [
+          "Programación de sensores de visión artificial.",
+          "Diseño de sistemas de control de calidad y automatización."
+        ]
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contactame",
+    "paragraph_1": "Contactame y hablemos de nuestro proximo trabajo. Envia un correo o contactame por ",
+    "a_linkedin": "Linkendin",
+    "form_name": "Nombre",
+    "form_email": "Correo",
+    "form_message": "Mensaje",
+    "form_btn": "Enviar"
+  }
+
+
+}

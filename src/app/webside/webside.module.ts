@@ -14,6 +14,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExpirienceComponent } from './pages/expirience/expirience.component';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { ExpirienceComponent } from './pages/expirience/expirience.component';
     WebsideRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    TranslateModule
   ]
 })
 export class WebsideModule { }
