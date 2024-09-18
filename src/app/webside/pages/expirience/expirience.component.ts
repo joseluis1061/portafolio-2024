@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 interface Education {
   title: string;
   description: string;
@@ -13,11 +14,13 @@ interface Jobs {
   templateUrl: './expirience.component.html',
   styleUrls: ['./expirience.component.scss']
 })
-export class ExpirienceComponent implements OnInit, AfterViewInit{
+export class ExpirienceComponent implements OnInit, OnDestroy{
 
   idCurrentItem: number = 0;
   educations: Education[] = [];
   jobs: Jobs[] = [];
+  educationSubs!: Subscription;
+  jobsSubs!: Subscription;
 
   itemNavigate = [
     {
@@ -47,27 +50,20 @@ export class ExpirienceComponent implements OnInit, AfterViewInit{
   ){}
 
 
+
   ngOnInit(): void {
     if(this.itemNavigate.length > 0 && this.idCurrentItem === 0){
       this.selectItem(this.itemNavigate[0].id);
 
-      this.translate.get('experience.education').subscribe((educations: Education[]) => {
+
+      this.educationSubs = this.translate.stream('experience.education').subscribe((educations: Education[]) => {
         this.educations = educations;
       });
 
-      this.translate.get('experience.jobs').subscribe((jobs: Jobs[]) => {
+      this.jobsSubs = this.translate.stream('experience.jobs').subscribe((jobs: Jobs[]) => {
         this.jobs = jobs;
-        console.log("JOBS: ", this.jobs)
       });
-
-
     }
-
-
-  }
-
-  ngAfterViewInit(): void {
-
   }
 
   //Función para activar un paso
@@ -75,6 +71,11 @@ export class ExpirienceComponent implements OnInit, AfterViewInit{
     if(id !== this.idCurrentItem){
       this.idCurrentItem = id;
     }
+  }
+
+  ngOnDestroy(): void {
+    this.educationSubs.unsubscribe();
+    this.jobsSubs.unsubscribe();
   }
 
 }

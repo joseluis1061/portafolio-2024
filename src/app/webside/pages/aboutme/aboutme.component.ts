@@ -30,9 +30,8 @@ export class AboutmeComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscription = this.translate.get('about_me.soft_skills').subscribe((soft_skills: Skill[]) => {
+    this.subscription = this.translate.stream('about_me.soft_skills').subscribe((soft_skills: Skill[]) => {
       this.soft_skills = soft_skills;
-      console.log("SOFT: ", this.soft_skills);
     });
   }
 
